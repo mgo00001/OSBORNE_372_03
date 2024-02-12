@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(233, 172, 150);
+}
+
+#gameboard {
+    height: 600px;
+    width: 600px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    cursor: crosshair;
+    background-image: url(images/back.jpg);
+}
+
+#object1 {
+    position: absolute;
+    transition: 1s;
+    left: 60px;
+    top: 450px;
+}
+
+#object1:hover {
+    opacity: .2;
+}
+
+#object2 {
+    position: absolute;
+    transition: 1s;
+    left: 270px;
+    top: 450px;
+}
+
+#object2:hover {
+    opacity: .2;
+}
+
+#object3 {
+    position: absolute;
+    transition: 1s;
+    left: 480px;
+    top: 450px;
+}
+
+#object3:hover {
+    opacity: .2;
+}
+
+#boxes {
+    position: absolute;
+    width: 580px;
+    left: 10px;
+    top: 440px;
+}
+
+#score {
+    height: 120px;
+    width: 250px;
+    position: fixed;
+    top: 580px;
+    left: 30px;
+    padding: 1px 20px;
+    color: white;
+    font-size: 1em;
+    background-color: rgb(37, 85, 51);
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 5px 5px 5px #222;
+}
