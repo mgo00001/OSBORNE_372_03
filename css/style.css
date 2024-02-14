@@ -1,33 +1,47 @@
 body {
-    background-color: rgb(233, 172, 150);
+    background-color: rgb(103, 202, 238);
+    
 }
 
 #gameboard {
     height: 600px;
     width: 600px;
-    margin: auto;
+    margin-left: 25px;
     overflow: hidden;
     position: relative;
     cursor: crosshair;
-    background-image: url(images/back.jpg);
+    background-image: url(../images/ocean.jpeg);
 }
 
 #object1 {
     position: absolute;
-    transition: 1s;
-    left: 60px;
+    transition: 0.5s;
+    left: 10px;
     top: 450px;
+    width: 30%;
+    animation-name: first;
+    animation-duration: 8s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
 }
 
 #object1:hover {
-    opacity: .2;
+    
+    filter: brightness(2);
+    filter: hue-rotate(180deg);
+
 }
 
 #object2 {
     position: absolute;
     transition: 1s;
-    left: 270px;
+    left: 200px;
     top: 450px;
+    width: 30%;
+    animation-name: middle;
+    animation-duration: 3s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
 }
 
 #object2:hover {
@@ -37,32 +51,85 @@ body {
 #object3 {
     position: absolute;
     transition: 1s;
-    left: 480px;
+    left: 400px;
     top: 450px;
+    width: 30%;
+    animation-name: last;
+    animation-duration: 5s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
 }
 
 #object3:hover {
     opacity: .2;
+    
+}
+
+
+@keyframes first{
+    0% {margin-top: 0px;}
+    10% {margin-top: 0px;}
+    20% {margin-top: -300px; margin-left: 20px;}
+    30% {margin-top: -200px; margin-left: -20px;}
+    40% {margin-top: -250px;}
+    50% {margin-top: -0px;}
+    60% {margin-top: -250px; margin-left: 20px;}
+    70% {margin-top: -190px; margin-left: -20px;}
+    80% {margin-top: -250px; margin-left: 20px;}
+    90% {margin-top: 0px;}
+    100% {margin-top: 0px;}
+}
+
+@keyframes middle{
+    0% {margin-top: 0px;}
+    10% {margin-top: 0px;}
+    20% {margin-top: -300px; margin-left: 20px;}
+    30% {margin-top: -200px; margin-left: -20px;}
+    40% {margin-top: -250px; margin-left: 20px;}
+    50% {margin-top: -200px;}
+    60% {margin-top: -0px; margin-left: 20px;}
+    70% {margin-top: -0px; margin-left: -20px;}
+    80% {margin-top: -250px; margin-left: 20px;}
+    90% {margin-top: -200px;}
+    100% {margin-top: 0px;}
+}
+
+@keyframes last{
+    0% {margin-top: 0px;}
+    10% {margin-top: 0px;}
+    20% {margin-top: -300px; margin-left: 20px;}
+    30% {margin-top: -350px; margin-left: -20px;}
+    40% {margin-top: -0px; margin-left: 20px;}
+    50% {margin-top: -0px;}
+    60% {margin-top: -300px; margin-left: 20px;}
+    70% {margin-top: -150px; margin-left: -20px;}
+    80% {margin-top: -250px; margin-left: 20px;}
+    90% {margin-top: -200px;}
+    100% {margin-top: 0px;}
 }
 
 #boxes {
     position: absolute;
     width: 580px;
-    left: 10px;
-    top: 440px;
+    left: 0px;
+    top: 360px;
+    width: 100%;
+    
 }
 
 #score {
     height: 120px;
     width: 250px;
     position: fixed;
-    top: 580px;
+    top: 0px;
     left: 30px;
     padding: 1px 20px;
     color: white;
-    font-size: 1em;
-    background-color: rgb(37, 85, 51);
+    font-size: 13px;
+    background-color: rgb(39, 61, 149);
     border-radius: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 5px 5px 5px #222;
+    font-family: "peachy-keen-jf", sans-serif;
+font-weight: 400;
+font-style: normal;
+    box-shadow: 5px 5px 5px #001876;
 }

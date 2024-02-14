@@ -2,30 +2,53 @@
 
 <html>
 <head>
-<title>Game</title>
+<title>Fish Finder!</title>
 <link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/oli1qoc.css">
 </head>
 
 <body>
-<div id="gameboard">
+<div id="gameboard" onmousedown="document.getElementById('sound').play();">
+    <audio id="sound"><source src="audio/4.mp3" type="audio/mp3"></audio>
 
-<img src="images/1.png" id="object1">
+<img src="images/goldfish.png" id="object1" onmouseover="document.getElementById('sound1').play();" onclick="clickCounter()">
+<audio id="sound1"><source src="audio/1.mp3" type="audio/mp3"></audio>
 
-<img src="images/2.png" id="object2">
+<img src="images/shark.png" id="object2" onmouseover="document.getElementById('sound2').play();" onclick="clickCounter()">
+<audio id="sound2"><source src="audio/2.mp3" type="audio/mp3"></audio>
 
-<img src="images/3.png" id="object3">
+<img src="images/pufferfish.png" id="object3" onmouseover="document.getElementById('sound3').play();" onclick="clickCounter()">
+<audio id="sound3"><source src="audio/3.mp3" type="audio/mp3"></audio>
 
-<img src="images/4.png" id="boxes">
+<img src="images/seafloor.png" id="boxes">
 
 </div>
 
 
-<div id="score">
-    <h3>Photograph the ___. Click here to start.</h3>
+<div id="score" onmouseover="document.getElementById('sound4').play();" onclick="beginGame()">
+    <audio id="sound4"><source src="audio/soundscape.mp3" type="audio/mp3"> </audio>
+    <h3>Photograph the fish and earn some cash! Click here to start.</h3>
     <h2>REWARD:&nbsp;$<span id="result"></span></h2>
 </div>
 
+<script>
+function beginGame() {
+    localStorage.clear();
+    localStorage.points = 0;
+    document.getElementById("result").innerHTML=localStorage.points;
+    document.getElementById("object1").style.WebkitAnimationPlayState="running";
+    document.getElementById("object2").style.WebkitAnimationPlayState="running";
+    document.getElementById("object3").style.WebkitAnimationPlayState="running";
+}
 
+function clickCounter() {
+    if(typeof(Storage)!=="undefined") {
+        localStorage.points = Number(localStorage.points)+100;
+        document.getElementById("result").innerHTML=localStorage.points;
+    }
+}
+
+</script>
 
 
 </body>
