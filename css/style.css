@@ -26,10 +26,9 @@ body {
 }
 
 #object1:hover {
-    
+    opacity: 0.5;
     filter: brightness(2);
-    filter: hue-rotate(180deg);
-
+    filter: hue-rotate(360deg);
 }
 
 #object2 {
@@ -46,6 +45,7 @@ body {
 
 #object2:hover {
     opacity: .2;
+    filter: hue-rotate(360deg);
 }
 
 #object3 {
@@ -62,7 +62,7 @@ body {
 
 #object3:hover {
     opacity: .2;
-    
+    filter: hue-rotate(360deg);
 }
 
 
