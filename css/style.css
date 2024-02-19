@@ -13,6 +13,10 @@ body {
     background-image: url(../images/ocean.jpeg);
 }
 
+#gameboard:active {
+    cursor: cell;
+}
+
 #object1 {
     position: absolute;
     transition: 0.5s;
@@ -29,6 +33,10 @@ body {
     opacity: 0.7;
     filter: brightness(2);
     filter: hue-rotate(360deg);
+}
+
+#object1:active {
+    filter: brightness(10);
 }
 
 #object2 {
@@ -132,4 +140,15 @@ body {
 font-weight: 400;
 font-style: normal;
     box-shadow: 5px 5px 5px #001876;
+}
+
+
+#endscreen {
+    height: 600px;
+    width: 600px;
+    margin-left: 25px;
+    position: absolute;
+    top:8px;
+    background-color: blue;
+    display: none;
 }
