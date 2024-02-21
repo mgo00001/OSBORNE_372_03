@@ -20,14 +20,18 @@
 <img src="images/pufferfish.png" id="object3" onmouseover="document.getElementById('sound3').play();" onclick="clickCounter(50)">
 <audio id="sound3"><source src="audio/3.mp3" type="audio/mp3"></audio>
 
+<img src="images/special.png" id="object4" onmouseover="document.getElementById('sound4').play();" onclick="clickCounter(100)">
+<audio id="sound4"><source src="audio/special.mp3" type="audio/mp3"></audio>
+
 <img src="images/seafloor.png" id="boxes">
 
 </div>
 
-<div id="endscreen"></div>
+<div id="endscreen"><p id="endtext"> Nice pictures! You did great! <br>If you would like to try again, click the start button at the bottom.</p>
+ <img src="images/endscreen.png" id="endimage"> </div>
 
-<div id="score" onmouseover="document.getElementById('sound4').play();" onclick="beginGame()">
-    <audio id="sound4"><source src="audio/soundscape.mp3" type="audio/mp3"> </audio>
+<div id="score" onmouseover="document.getElementById('sound5').play();" onclick="beginGame()">
+    <audio id="sound5"><source src="audio/bg.mp3" type="audio/mp3"> </audio>
     <h3>Photograph the fish and earn some cash! Click here to start.</h3>
     <h2>REWARD:&nbsp;$<span id="result"></span></h2>
 </div>
@@ -40,7 +44,8 @@ function beginGame() {
     document.getElementById("object1").style.WebkitAnimationPlayState="running";
     document.getElementById("object2").style.WebkitAnimationPlayState="running";
     document.getElementById("object3").style.WebkitAnimationPlayState="running";
-    setTimeout(endGame, 60000);
+    document.getElementById("object4").style.WebkitAnimationPlayState="running";
+    setTimeout(endGame, 63000);
 }
 
 function clickCounter(score) {
@@ -54,6 +59,7 @@ function endGame() {
     document.getElementById("object1").style.WebkitAnimationPlayState="paused";
     document.getElementById("object2").style.WebkitAnimationPlayState="paused";
     document.getElementById("object3").style.WebkitAnimationPlayState="paused";
+    document.getElementById("object4").style.WebkitAnimationPlayState="paused";
     document.getElementById("endscreen").style.display='block';
     document.getElementById('sound4').pause();
 

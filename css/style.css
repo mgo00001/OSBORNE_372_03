@@ -22,9 +22,8 @@ body {
     transition: 0.5s;
     left: 10px;
     top: 450px;
-    width: 30%;
     animation-name: first;
-    animation-duration: 8s;
+    animation-duration: 7s;
     animation-play-state: paused;
     animation-iteration-count: infinite;
 }
@@ -44,9 +43,8 @@ body {
     transition: 1s;
     left: 200px;
     top: 450px;
-    width: 30%;
     animation-name: middle;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-play-state: paused;
     animation-iteration-count: infinite;
 }
@@ -56,14 +54,18 @@ body {
     filter: hue-rotate(360deg);
 }
 
+#object2:active {
+    filter: brightness(10);
+}
+
 #object3 {
     position: absolute;
     transition: 1s;
     left: 400px;
     top: 450px;
-    width: 30%;
+   width: 30%;
     animation-name: last;
-    animation-duration: 5s;
+    animation-duration: 9s;
     animation-play-state: paused;
     animation-iteration-count: infinite;
 }
@@ -73,17 +75,40 @@ body {
     filter: hue-rotate(360deg);
 }
 
+#object3:active {
+    filter: brightness(10);
+}
+
+#object4 {
+    position: absolute;
+    transition: 1s;
+    left: -150px;
+    top: 100px;
+    animation-name: rainbow;
+    animation-duration: 13s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+}
+
+#object4:hover {
+    opacity: .7;
+    filter: hue-rotate(360deg);
+}
+
+#object4:active {
+    filter: brightness(10);
+}
 
 @keyframes first{
     0% {margin-top: 0px;}
     10% {margin-top: 0px;}
-    20% {margin-top: -300px; margin-left: 20px;}
-    30% {margin-top: -200px; margin-left: -20px;}
-    40% {margin-top: -250px;}
+    20% {margin-top: -300px; margin-left: -20px;}
+    30% {margin-top: -200px; margin-left: 10px;}
+    40% {margin-top: -350px;}
     50% {margin-top: -0px;}
-    60% {margin-top: -250px; margin-left: 20px;}
-    70% {margin-top: -190px; margin-left: -20px;}
-    80% {margin-top: -250px; margin-left: 20px;}
+    60% {margin-top: -450px; margin-left: 40px;}
+    70% {margin-top: -250px; margin-left: -10px;}
+    80% {margin-top: -350px; margin-left: 20px;}
     90% {margin-top: 0px;}
     100% {margin-top: 0px;}
 }
@@ -94,10 +119,10 @@ body {
     20% {margin-top: -300px; margin-left: 20px;}
     30% {margin-top: -200px; margin-left: -10px;}
     40% {margin-top: -250px; margin-left: 20px;}
-    50% {margin-top: -200px;}
-    60% {margin-top: -0px; margin-left: 20px;}
-    70% {margin-top: -0px; margin-left: -20px;}
-    80% {margin-top: -250px; margin-left: 20px;}
+    50% {margin-top: -400px;}
+    60% {margin-top: -0px; margin-left: 40px;}
+    70% {margin-top: -0px; margin-left: -40px;}
+    80% {margin-top: -350px; margin-left: 30px;}
     90% {margin-top: -200px;}
     100% {margin-top: 0px;}
 }
@@ -107,13 +132,27 @@ body {
     10% {margin-top: 0px;}
     20% {margin-top: -300px; margin-left: 20px;}
     30% {margin-top: -350px; margin-left: -20px;}
-    40% {margin-top: -0px; margin-left: 20px;}
+    40% {margin-top: -0px; margin-left: 50px;}
     50% {margin-top: -0px;}
     60% {margin-top: -300px; margin-left: 30px;}
     70% {margin-top: -150px; margin-left: -20px;}
-    80% {margin-top: -250px; margin-left: 20px;}
+    80% {margin-top: -250px; margin-left: 40px;}
     90% {margin-top: -300px;}
     100% {margin-top: 0px;}
+}
+
+@keyframes rainbow{
+    0% {margin-top: -200px; margin-left: 100px;}
+    10% {margin-bottom: 700px; margin-left: 300px;}
+    20% {margin-top: -400px; margin-left: 500px;}
+    30% { margin-bottom: 500px;  margin-left: 400px;}
+    40% {margin-top: -100px; margin-left: 50px;}
+    50% {margin-bottom: 600px; margin-left: 500px; }
+    60% {margin-top: 300px; margin-left: 300px;}
+    70% { margin-bottom: 200px; margin-left: 100px;}
+    80% { margin-top: 0px; margin-left: 600px;}
+    90% {margin-top: -300px; margin-left: 1000px;}
+    100% {margin-top: -200px; margin-left: 100px;}
 }
 
 #boxes {
@@ -129,8 +168,8 @@ body {
     height: 120px;
     width: 250px;
     position: fixed;
-    top: 0px;
-    left: 30px;
+    top: 600px;
+    left: 180px;
     padding: 1px 20px;
     color: white;
     font-size: 13px;
@@ -149,6 +188,26 @@ font-style: normal;
     margin-left: 25px;
     position: absolute;
     top:8px;
-    background-color: blue;
+    background-color: rgb(167, 230, 255);
     display: none;
+    
+}
+
+#endtext {
+    font-family: "peachy-keen-jf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: rgb(39, 61, 149);
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    width: 80%;
+}
+
+#endimage {
+    margin: auto;
+    width: 45%;
+    margin-left: 160px;
+    margin-top: 20px;
 }
