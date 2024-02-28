@@ -11,16 +11,16 @@
 <div id="gameboard" onmousedown="document.getElementById('sound').play();">
     <audio id="sound"><source src="audio/4.mp3" type="audio/mp3"></audio>
 
-<img src="images/goldfish.png" id="object1" onmouseover="document.getElementById('sound1').play();" onclick="clickCounter(this)">
+<img src="images/goldfish.png" id="object1" onmouseover="document.getElementById('sound1').play();" onclick="clickCounter(+10)">
 <audio id="sound1"><source src="audio/1.mp3" type="audio/mp3"></audio>
 
-<img src="images/shark.png" id="object2" onmouseover="document.getElementById('sound2').play();" onclick="clickCounter(this)">
+<img src="images/shark.png" id="object2" onmouseover="document.getElementById('sound2').play();" onclick="clickCounter(+30)">
 <audio id="sound2"><source src="audio/2.mp3" type="audio/mp3"></audio>
 
-<img src="images/pufferfish.png" id="object3" onmouseover="document.getElementById('sound3').play();" onclick="clickCounter(this)">
+<img src="images/pufferfish.png" id="object3" onmouseover="document.getElementById('sound3').play();" onclick="clickCounter(+20)">
 <audio id="sound3"><source src="audio/3.mp3" type="audio/mp3"></audio>
 
-<img src="images/special.png" id="object4" onmouseover="document.getElementById('sound4').play();" onclick="clickCounter(this)">
+<img src="images/special.png" id="object4" onmouseover="document.getElementById('sound4').play();" onclick="clickCounter(+100)">
 <audio id="sound4"><source src="audio/special.mp3" type="audio/mp3"></audio>
 
 <img src="images/seafloor.png" id="boxes">
@@ -28,7 +28,10 @@
 </div>
 
 <div id="endscreen"><p id="endtext"> Nice pictures! You did great! <br>If you would like to try again, click the start button at the bottom.</p>
- <img src="images/endscreen.png" id="endimage" onClick="beginGame()"> </div>
+ <img src="images/endscreen.png" id="endimage" onClick="beginGame()"> 
+<input type="reset" name="resetbutton" value="Reset"
+onClick="beginGame()">
+</div>
 
 <div id="score" onmouseover="document.getElementById('sound5').play();" onclick="beginGame()">
     <audio id="sound5"><source src="audio/bg.mp3" type="audio/mp3"> </audio>
@@ -50,15 +53,11 @@ function beginGame() {
     setTimeout(endGame, 9000);
 }
 
-function clickCounter(element) {
+function clickCounter(score) {
     if(typeof(Storage)!=="undefined") {
-        localStorage.points = Number(localStorage.points)+ 10;
+        localStorage.points = Number(localStorage.points)+ score;
         document.getElementById("result").innerHTML=localStorage.points;
     }
-
-    const currentAnimation = element.style.animationName;
-element.style.animationName = currentAnimation === 'first' ? 'first2' : 'first';
-
 }
 
 

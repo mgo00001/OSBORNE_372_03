@@ -63,7 +63,6 @@ body {
     transition: 1s;
     left: 400px;
     top: 450px;
-   width: 30%;
     animation-name: last;
     animation-duration: 9s;
     animation-play-state: paused;
@@ -143,15 +142,15 @@ body {
 
 @keyframes last{
     0% {margin-top: 0px;}
-    10% {margin-top: 0px;}
-    20% {margin-top: -300px; margin-left: 20px;}
+    10% {margin-top: -400px; margin-left: -30px;}
+    20% {margin-top: -100px; margin-left: 20px;}
     30% {margin-top: -350px; margin-left: -20px;}
     40% {margin-top: -0px; margin-left: 50px;}
     50% {margin-top: -0px;}
     60% {margin-top: -300px; margin-left: 30px;}
-    70% {margin-top: -150px; margin-left: -40px;}
-    80% {margin-top: -275px; margin-left: 40px;}
-    90% {margin-top: -350px;}
+    70% {margin-top: -380px; margin-left: -40px;}
+    80% {margin-top: -450px; margin-left: 40px;}
+    90% {margin-top: -250px;}
     100% {margin-top: 0px;}
 }
 
