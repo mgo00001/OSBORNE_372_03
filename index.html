@@ -32,7 +32,7 @@
  <img src="images/endscreen.png" id="endimage" onClick="beginGame()"> 
 </div>
 
-<div id="score" onclick="beginGame(); document.getElementById('sound5').play(); ">
+<div id="score" onclick="beginGame(); ">
     <audio id="sound5"><source src="audio/bg.mp3" type="audio/mp3"> </audio>
     <h3>Photograph the fish and earn some cash! Click here to start.</h3>
     <h2>REWARD:&nbsp;$<span id="result"></span></h2>
@@ -43,13 +43,14 @@
 function beginGame() {
     localStorage.clear();
     localStorage.points = 0;
+    document.getElementById('sound5').play();
     document.getElementById("result").innerHTML=localStorage.points;
     document.getElementById("object1").style.WebkitAnimationPlayState="running";
     document.getElementById("object2").style.WebkitAnimationPlayState="running";
     document.getElementById("object3").style.WebkitAnimationPlayState="running";
     document.getElementById("object4").style.WebkitAnimationPlayState="running";
     document.getElementById("endscreen").style.display='none';
-    setTimeout(endGame, 63000);
+    setTimeout(endGame, 62500);
 }
 
 function clickCounter(score) {
