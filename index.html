@@ -11,29 +11,28 @@
 <div id="gameboard" onmousedown="document.getElementById('sound').play();">
     <audio id="sound"><source src="audio/4.mp3" type="audio/mp3"></audio>
 
-<img src="images/goldfish.png" id="object1" onmouseover="document.getElementById('sound1').play();" onclick="clickCounter(+10)">
+<img src="images/goldfish.png" id="object1" onmouseover="document.getElementById('sound1').play();" onclick="clickCounter(+10); document.getElementById('camera').play();">
 <audio id="sound1"><source src="audio/1.mp3" type="audio/mp3"></audio>
+<audio id="camera"><source src="audio/camera.mp3" type="audio/mp3"></audio>
 
-<img src="images/shark.png" id="object2" onmouseover="document.getElementById('sound2').play();" onclick="clickCounter(+30)">
+<img src="images/shark.png" id="object2" onmouseover="document.getElementById('sound2').play();" onclick="clickCounter(+30); document.getElementById('camera').play();">
 <audio id="sound2"><source src="audio/2.mp3" type="audio/mp3"></audio>
 
-<img src="images/pufferfish.png" id="object3" onmouseover="document.getElementById('sound3').play();" onclick="clickCounter(+20)">
+<img src="images/pufferfish.png" id="object3" onmouseover="document.getElementById('sound3').play();" onclick="clickCounter(+20); document.getElementById('camera').play();">
 <audio id="sound3"><source src="audio/3.mp3" type="audio/mp3"></audio>
 
-<img src="images/special.png" id="object4" onmouseover="document.getElementById('sound4').play();" onclick="clickCounter(+100)">
+<img src="images/special.png" id="object4" onmouseover="document.getElementById('sound4').play();" onclick="clickCounter(+100); document.getElementById('camera').play();">
 <audio id="sound4"><source src="audio/special.mp3" type="audio/mp3"></audio>
 
 <img src="images/seafloor.png" id="boxes">
 
 </div>
 
-<div id="endscreen"><p id="endtext"> Nice pictures! You did great! <br>If you would like to try again, click the start button at the bottom.</p>
+<div id="endscreen"><p id="endtext"> Nice pictures! You did great! <br>If you would like to try again, click the blue fish at the bottom.</p>
  <img src="images/endscreen.png" id="endimage" onClick="beginGame()"> 
-<input type="reset" name="resetbutton" value="Reset"
-onClick="beginGame()">
 </div>
 
-<div id="score" onmouseover="document.getElementById('sound5').play();" onclick="beginGame()">
+<div id="score" onclick="beginGame(); document.getElementById('sound5').play(); ">
     <audio id="sound5"><source src="audio/bg.mp3" type="audio/mp3"> </audio>
     <h3>Photograph the fish and earn some cash! Click here to start.</h3>
     <h2>REWARD:&nbsp;$<span id="result"></span></h2>
@@ -50,7 +49,7 @@ function beginGame() {
     document.getElementById("object3").style.WebkitAnimationPlayState="running";
     document.getElementById("object4").style.WebkitAnimationPlayState="running";
     document.getElementById("endscreen").style.display='none';
-    setTimeout(endGame, 9000);
+    setTimeout(endGame, 63000);
 }
 
 function clickCounter(score) {
@@ -68,8 +67,9 @@ function endGame() {
     document.getElementById("object4").style.WebkitAnimationPlayState="paused";
     document.getElementById("endscreen").style.display='block';
     document.getElementById('sound4').pause();
-
+    
 }
+
 
 </script>
 
