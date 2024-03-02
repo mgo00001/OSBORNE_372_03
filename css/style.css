@@ -23,7 +23,7 @@ body {
     left: 10px;
     top: 450px;
     animation-name: first;
-    animation-duration: 7s;
+    animation-duration: 6s;
     animation-play-state: paused;
     animation-iteration-count: infinite;
 }
@@ -84,7 +84,7 @@ body {
     left: -150px;
     top: 100px;
     animation-name: rainbow;
-    animation-duration: 13s;
+    animation-duration: 11s;
     animation-play-state: paused;
     animation-iteration-count: infinite;
 }
@@ -104,9 +104,9 @@ body {
     20% {margin-top: -300px; margin-left: -20px;}
     30% {margin-top: -200px; margin-left: 10px;}
     40% {margin-top: -350px;}
-    50% {margin-top: -0px;}
+    50% {margin-top: -500px;}
     60% {margin-top: -450px; margin-left: 40px;}
-    70% {margin-top: -250px; margin-left: -10px;}
+    70% {margin-top: -100px; margin-left: -10px;}
     80% {margin-top: -350px; margin-left: 20px;}
     90% {margin-top: 0px;}
     100% {margin-top: 0px;}
